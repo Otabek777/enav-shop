@@ -79,6 +79,10 @@
                             <h1>Магазин товаров для промышленной автоматизации</h1>
                             <p>Наша компания имеет большой опыт работы в данной сфере и готова предложить широкий ассортимент качественных товаров по доступным ценам.</p>
                             <button class="main_btn">Заказать звонок</button>
+                            <div class="banner__imgMobile">
+                                <img src="img/banner-mobile.png" alt="">
+                            </div>
+                            <button class="btn2">Скачать прайс</button>
                         </div>
                     </div>
                 </div>
@@ -295,22 +299,7 @@
     <script src="slick-1.8.1/slick/slick.min.js"></script>
     <script src="js/main.js"></script>
     <script>
-        $('.banner__slider').slick({
-            infinite: true,
-            fade: true,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            dots: false,
-            arrows: true,
-            responsive: [
-                {
-                breakpoint: 1024,
-                settings: {
-                    arrows: false
-                }
-                }
-            ]
-        });
+        
         $(document).ready(function(){
             if (window.innerWidth < 1024) {
                 $('.products__slider').slick({
@@ -322,6 +311,14 @@
                     variableWidth: true
                 });
             } else {
+                $('.banner__slider').slick({
+                    infinite: true,
+                    fade: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    dots: false,
+                    arrows: true,
+                });
                 $('.products__slider').slick({
                     infinite: true,
                     slidesToShow: 4,

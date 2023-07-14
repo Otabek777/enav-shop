@@ -267,6 +267,12 @@ ul, ol {
 .banner {
     min-height: 800px;
     margin-top: -24px;
+    .btn2 {
+        display: none;
+    }
+}
+.banner__imgMobile {
+    display: none;
 }
 .banner__slider {
     .slick-prev, .slick-next {
@@ -1446,6 +1452,22 @@ ul, ol {
         min-height: auto;
         display: block;
         margin-top: -14px;
+        .main_btn {
+            display: none;
+        }
+        .btn2 {
+            display: flex;
+            width: 100%;
+        }
+    }
+    .banner__imgMobile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+        img {
+            width: 100%;
+        }
     }
     h1 {
         color: var(--text-black, #232323);
@@ -1454,8 +1476,12 @@ ul, ol {
         line-height: 110%; /* 37.4px */
     }
     .banner__wrap {
+        display: none;
         min-height: auto;
         background: transparent !important;
+    }
+    .banner__wrap:nth-child(1) {
+        display: block;
     }
     .banner__wrap::before, .banner__wrap::after {
         display: none;
@@ -1481,10 +1507,6 @@ ul, ol {
         font-size: 14px;
         line-height: 145%; /* 20.3px */
         margin-bottom: 17px;
-    }
-    .main_btn {
-        color: #212121;
-        border: 1px solid #212121;
     }
     .products {
         display: block;
@@ -1630,7 +1652,12 @@ ul, ol {
         grid-gap: 16px;
     }
     .paginator {
-        display: none;
+        margin-top: 24px;
+    }
+    .paginator a {
+        width: 32px;
+        height: 32px;
+        font-size: 12px;
     }
     .catalog2 {
         display: block;
